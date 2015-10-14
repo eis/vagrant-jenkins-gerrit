@@ -66,6 +66,9 @@ Vagrant.configure("2") do |config|
   # #               Managed by Puppet.\n"
   # # }
   #
+
+  config.vm.provision :shell, :privileged => false, :inline => "/vagrant/download-gerrit-if-not-present.sh"
+
   config.vm.provision :puppet do |puppet|
       ## tell Puppet where to find the hiera config
       puppet.options = "--hiera_config /vagrant/puppet/manifests/hiera.yaml"
