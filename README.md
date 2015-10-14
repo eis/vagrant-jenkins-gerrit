@@ -13,8 +13,9 @@ Changes:
 Steps to run:
 
 1. git clone ...
-2. git submodule update --init
+(2. git submodule update --init)
 3. vagrant up
 
 **Note: currently this installs only Jenkins, not Gerrit! It's a work in progress!**
 
+Another note: this doesn't actually use submodules(!).
